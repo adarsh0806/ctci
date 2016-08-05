@@ -59,12 +59,13 @@ def string_compression(s1):
 		print s1
 	else:
 		print concatenated_tuples
-
+# Testing
 # string_compression('aabbbbckkk')
 # string_compression('zzyxtttc')
 
 
 # Rotate a MxN matrix by 90 degrees (last row becomes the first column and so on)
+# TODO
 ##M by N matrix has dimensions 4 by 4
 ##Visual representation of contents:
 ##[ 1  2  3  4 ]
@@ -77,7 +78,7 @@ def string_compression(s1):
 ##[ 14  10  6  2 ]
 ##[ 15  11  7  3 ]
 ##[ 16  12  8  4 ]
-# TODO
+
 
 # If an element in an MxN matrix is 0, it's row and column are set to 0
 def update_matrix(matrix):
@@ -123,8 +124,7 @@ def check_rotation(s1, s2):
 		print True
 	else:
 		print False
-
-
-check_rotation('apple', 'pleap')
-check_rotation('apple', 'papel')
+# Testing
+# check_rotation('apple', 'pleap')
+# check_rotation('apple', 'papel')
 
