@@ -69,23 +69,23 @@ class LinkedList(object):
 				previous = current
 				current = current.get_next()
 		if current is None:
-			raise ValueError('Data no in linked list.')
+			raise ValueError('Data not in linked list.')
 		if previous is None:
 			self.head = current.get_next()
 		else:
 			previous.set_next(current.get_next())
 
-
+# Set up linked list
 ll = LinkedList()
 data= [1,2,3,4,5,6,6,4,3]  
 for i in data:
 	ll.insert(i)
 
-print ll.display()
+# print ll.display()
 # print ll.size()
 # print ll.search(2)
 
-# Remove duplicates from an unsorted linked list
+# 2.1 Remove duplicates from an unsorted linked list
 def remove_duplicates(self):
 	dictionary = {}
 	current = self.head
@@ -105,7 +105,7 @@ def remove_duplicates(self):
 # print ll.display()
 # remove_duplicates(ll)
 
-# Find kth to last element in a linked list
+# 2.2 Find kth to last element in a linked list
 def kth_element(self, k):
 	p1 = self.head
 	p2 = self.head
@@ -119,11 +119,78 @@ def kth_element(self, k):
 		p1 = p1.get_next()
 		p2 = p2.get_next()
 
-	print p2.get_data()
+	# print p2.get_data()
 	return p2.get_data()
 
-kth_element(ll, 3)
+# kth_element(ll, 3)
+
+# 2.3 Delete middle element of a linked list, given access to only that element
+def delete_middle(self, m):
+	current = m.get_next()
+	m.data = current.get_data()
+	m.set_next = current.get_next()
+
+# 2.4 Partition a linked list around a value x s.t. all nodes before partition are lower, 
+# and all nodes after partition are greater
+def partition(self, x):
+	ll1 = LinkedList()
+	ll2 = LinkedList()
+	current = self.head
+	while current:
+		if current.get_data() < x:
+			ll1.insert(current.get_data())
+			
+		elif current.get_data >= x:
+			ll2.insert(current.get_data())
+		
+		current = current.get_next()
+
+	current = ll1.head
+	while current:
+		print current.get_data()
+		# because inserts happen at the start of the linked list, we insert into ll2
+		ll2.insert(current.get_data)
+		current = current.get_next()
+	
+	print ll2.display()
+	return ll2
+
+# partition(ll, 5)
+
+# 2.5 TODO
+# 2.6 Given a circular linked list, return the node at the beginning of th loop TODO
+
+# 2.7 Check if a linked list is a palindrome
+# copy linked list to a new one using insert(which inserts at the start, hence it becomes a reverse copy)
+def reverse_copy(l):
+	reverse_ll = LinkedList()
+	current = l.head
+	while current:
+		reverse_ll.insert(current.get_data())
+		current = current.get_next()
+	return reverse_ll
 
 
+def palindrome_check(l):
+	reverse_ll = reverse_copy(l)
+	p1 = l.head
+	p2 = reverse_ll.head
 
+	for i in range(l.size()/2):
+		if p1.get_data() != p2.get_data():
+			print 'Not a palindrome.'
+			return False
+		else:
+			p1 = p1.get_next()
+			p2 = p2.get_next()
+	print 'Linked list is a palindrome.'
+	return True
+
+ll2 = LinkedList()
+data= [1,2,3,2,1]  
+for i in data:
+	ll2.insert(i)
+
+print ll2.display()
+palindrome_check(ll2)
 
