@@ -37,33 +37,6 @@ class stack(object):
 # TODO
 
 # 3.2 Return the minimum element in the stack(design stack such)
-# class StackMin(object):
-# 	def __init__(self):
-# 		self.items = []
-# 		self.minimum = []
-
-# 	def push(self, data):
-# 		self.items.append(data)
-# 		# checking if data is lower than minimum value
-# 		if len(self.minimum) == 0 or data <= self.minimum[-1]:
-# 			self.minimum.append(data)
-
-# 	def pop(self):
-# 		if len(self.items) == 0:
-# 			return None
-# 		data = self.items.pop()
-# 		# if data to be popped is the lowest value in the minimum list
-# 		if data == self.minimum[-1]:
-# 			self.minimum.pop()
-# 		return data
-
-#     def get_min(self):
-#     	if len(self.minimum) == 0:
-#     		return None
-#     	return self.minimum[-1]
-
-
-
 class StackMin(object):
 	def __init__(self):
 		self.items = []
