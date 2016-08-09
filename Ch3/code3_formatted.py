@@ -220,12 +220,12 @@ def stack_sort(s):
 		print '				*** next iteration ***'
 	return ts
 
-data = [4,2,1,3,5]  
-s = stack()  
-for i in data: 
-  s.push(i)
-print s.items
-s = stack_sort(s)
+# data = [4,2,1,3,5]  
+# s = stack()  
+# for i in data: 
+#   s.push(i)
+# print s.items
+# s = stack_sort(s)
 # print s.items
 			
 
@@ -266,4 +266,36 @@ class CatDog(object):
 # q = CatDog()
 # q.enqueue('cat', 1)
 # q.display()
+
+
+# Alternative solution to sorting a stack
+def sortstack(s):  
+      tempstack = stack()  
+      temp = None  
+      for i in range((s.size())):  
+           temp = s.pop()  
+           print 'temp: ', temp
+           count = 0  
+           for j in range((tempstack.size())):  
+                if tempstack.peek() > temp:  
+                     s.push(tempstack.pop()) 
+                     print 's: ', s.items 
+                     count += 1  
+                else:  
+                     break  
+           tempstack.push(temp) 
+
+           print 'tempstack: ', tempstack.items 
+           
+           for j in range(count):  
+                tempstack.push(s.pop())
+      print 'tempstack: ', tempstack.items 
+      return tempstack  
+
+data = [4,2,1,3,5]  
+s = stack()  
+for i in data: 
+  s.push(i)
+print 'Original stack: ', s.items
+s = sortstack(s)
 
