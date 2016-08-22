@@ -29,4 +29,4 @@ def integer_pal(n):
 	print reverse
 	return reverse == n
 
-print integer_pal(1221)
+print integer_pal(1234)
