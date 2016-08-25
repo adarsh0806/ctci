@@ -13,8 +13,5 @@ class AppleStocks(object):
 
 		return max_profit
 
-
-
 if __name__ == '__main__':
-	print AppleStocks().apple_stocks([10,5,3,2])
-		
+	print AppleStocks().apple_stocks([10,5,3,2])	
