@@ -24,6 +24,8 @@
 # print products_of_all_ints_before_index
 # print product_so_far 
 
+
+# T: O(n)
 def product_of_numbers_not_at_index(l):
 	# Product before index
 	products_of_all_ints_before_index = [None] * len(l)
