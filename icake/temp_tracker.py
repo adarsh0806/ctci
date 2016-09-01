@@ -43,9 +43,3 @@ class TempTracker(object):
 
 	def get_mode(self):
 		return self.mode
-
-if __name__ == '__main__':
-		print TempTracker().insert(5)	
-		
-	
-		
