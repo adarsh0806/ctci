@@ -1,4 +1,4 @@
-# T: O(1), S: O(1)
+# T: O(1), S: O()
 # range overlap
 def point_overlap(p1, w1, p2, w2):
 	# highest starting point
