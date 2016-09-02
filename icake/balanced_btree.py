@@ -26,6 +26,7 @@ class BTreeNode(object):
 			if not node.left and not node.right:
 				if depth not in depths:
 					depths.append(depth)
+				# depths can be (7,8) but nont (7,9). they can be at most 1 apart.
 				if len(depths) > 2 or (len(depths) == 2 and abs(depths[0] - depths[1]) > 1):
 					return False
 			else:
