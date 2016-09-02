@@ -1,4 +1,5 @@
 # Check if a Binary Tree is a Binary Search Tree
+# T:O(n),S:O(n), O(lgn) if the tree is balanced
 class BTreeNode(object):
     """docstring for BTreeNode"""
     def __init__(self, value):
