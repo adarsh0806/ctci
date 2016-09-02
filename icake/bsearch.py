@@ -9,6 +9,8 @@ def bsearch(target, nums):
 			floor = guess_index
 		elif target < guess_value:
 			cieling = guess_index
-		elif target = guess_value:
+		elif target == guess_value:
 			return True
 	return False
+
+print bsearch(5, [2,3,4,5,6])

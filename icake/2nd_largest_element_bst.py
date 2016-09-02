@@ -1,4 +1,5 @@
 # Find the 2nd largest element in a BST
+# T: O(h), S: O(h)
 class BinaryTree(object):
 	"""docstring for BinaryTree"""
 	def __init__(self):
