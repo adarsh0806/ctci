@@ -1,3 +1,4 @@
+# T: O(lgn) S: O(1)
 def rotation_point(words):
 	first_word = words[0]
 	floor = 0
