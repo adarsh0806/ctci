@@ -1,12 +1,15 @@
+# T: O(n) if n items.
 # Implement a queue using 2 stacks
 class Stack(object):
 	"""docstring for Stack"""
 	def __init__(self):
 		self.items = []
 
+	# T: O(1)
 	def push(self, data):
 		return self.items.append(data)
-
+	
+	# T: O(1)
 	def pop(self):
 		return self.items.pop()
 
@@ -28,9 +31,11 @@ class Queue2Stacks(object):
 		self.s1 = Stack()
 		self.s2 = Stack()
 
+	# T: O(1)
 	def enqueue(self, data):
 		return self.s1.push(data)
-
+	
+	# T: O(1)
 	def dequeue(self):
 		for i in xrange(self.s1.size()):
 			self.s2.push(self.s1.pop())
