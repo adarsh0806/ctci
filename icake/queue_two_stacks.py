@@ -14,7 +14,7 @@ class Stack(object):
 		return self.items.pop()
 
 	def peek(self):
-		return self.items[len(items) - 1]
+		return self.items[len(self.items) - 1]
 
 	def display(self):
 		return self.items
