@@ -1,6 +1,7 @@
 # Return all possible permutations of a string
 # T: O(n), S: (n)
 def string_permutations(s):
+	# base case
 	if len(s) <= 1:
 		return set([s])
 	# 'cat'
