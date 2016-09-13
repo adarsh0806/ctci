@@ -7,7 +7,7 @@ def longest_common_prefix(words):
 		i = 0
 		while i < len(word) and i < len(longest) and word[i] == longest[i]:
 			i += 1
-		return longest[:i]
+	return longest[:i]
 
 # print longest_common_prefix(['abc', 'abdc', 'abdeg'])
 
