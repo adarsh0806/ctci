@@ -265,6 +265,18 @@ def sortstack(s):
       print 'tempstack: ', tempstack.items 
       return tempstack  
 
+# Sort stack without using other data structure except Stack
+def sortStack(s):
+    sortedStack = Stack()
+    while not s.isEmpty():
+        data = s.pop()      
+        while (not sortedStack.isEmpty()) and sortedStack.peek() > data:
+            stack.push(sortedStack.pop())
+        sortedStack.push(data)
+    return sortedStack
+
+
+
 data = [4,2,1,3,5]  
 s = stack()  
 for i in data: 
