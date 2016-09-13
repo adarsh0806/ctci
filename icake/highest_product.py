@@ -4,7 +4,7 @@ def highest_product(l):
 	l_sorted = sorted(l, reverse = True)
 	return l_sorted[0] * l_sorted[1] * l_sorted[2]
 
-print highest_product([3,4,2,7,1,9])
+print highest_product([1,4,7,2])
 
 # T: O(n), S: O(1) additonal
 # Assuming at least 3 elements in list
@@ -20,8 +20,8 @@ def highest_product(l):
 		highest_product_three_nos = max(highest_product_three_nos, current * highest_product_two_nos, current * lowest_product_two_nos)
 		highest_product_two_nos = max(highest_product_two_nos, current * highest, current * lowest)
 		lowest_product_two_nos = min(lowest_product_two_nos, current * highest, current * lowest)
-		highest = max(highest, lowest)
-		lowest = min(highest, lowest)
+		highest = max(highest, current)
+		lowest = min(highest, current)
 
 	return highest_product_three_nos
 
